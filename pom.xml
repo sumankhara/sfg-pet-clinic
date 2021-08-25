@@ -29,10 +29,6 @@
 		<maven.compiler.target>8</maven.compiler.target>
 	</properties>
 
-	<dependencies>
-
-	</dependencies>
-
 	<build>
 		<plugins>
 			<plugin>
@@ -47,7 +43,19 @@
 					</excludes>
 				</configuration>
 			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-release-plugin</artifactId>
+				<configuration>
+					<goals>install</goals>
+					<autoVersionSubmodules>true</autoVersionSubmodules>
+				</configuration>
+			</plugin>
 		</plugins>
 	</build>
+
+	<scm>
+		<developerConnection>scm:git:https://github.com/sumankhara/sfg-pet-clinic.git</developerConnection>
+	</scm>
 
 </project>
